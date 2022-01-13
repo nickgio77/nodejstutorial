@@ -1,6 +1,9 @@
 extends layout
 
 block content
-  h1.titolo= title
-  p.paragrafo Welcome #{nickname} #{title}
-  a(href=`${link}`, class="link") Go to details page
+  div.inner
+    h1 Test page NodeJS Tutorial 
+    p This is a simple test page to perform some of the NodeJS applications
+      br
+      .
+        | In this test page you can #[a(href="/account/login") log in] , #[a(href="/account/registration") register] or #[a(href="/account") access] on a private page (after log in)

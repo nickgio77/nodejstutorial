@@ -4,4 +4,21 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    block content
+    div.header
+      div.inner
+        div.logo
+          span.color1 NICK
+            span.color2 GIO
+              span.color3 77 
+        nav.menu
+          a(href="/") home  
+          a(href="/account/login") login
+          a(href="/account/registration") register
+          a(href="/account/account") account page 
+    div.container
+      block content
+    footer
+      div.inner
+        p Website by Nick © 
+          a.email(href=`mailto:${email}`,target='_blank') #{email} 
+        

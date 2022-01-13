@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  div.inner
+    h1.titolo= title
+    p.paragrafo #{title} 
+    p.paragrafo This is #{nickname} page local
+    div.paragrafo.dettagli 
+      h2 Personal sheet
+      p Full name: #{fullname}
+      p Age: #{age}
+      p Interests:
+      ul
+        each item in interests
+          li #{item} 
+    a(href="/", class="link") Back to home page
+

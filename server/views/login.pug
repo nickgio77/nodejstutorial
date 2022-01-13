@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    div.inner
+        h1.titolo= title
+        div.form-contatti
+            h3 Log in
+            p Please log with your username and password to access #{nickname} details area
+            form(action="/account", method="post") 
+                div.riga
+                    label(for="username") Username 
+                    input(type="text", name="username")
+                div.riga 
+                    label(for="password") Password 
+                    input(type="text", name="password")
+                div.riga.send
+                    input(type="submit", value="LOG IN") 
+        a(href="/", class="lnkBack") Back to home page

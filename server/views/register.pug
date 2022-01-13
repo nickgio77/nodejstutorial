@@ -1,0 +1,24 @@
+extends layout
+
+block content
+    div.inner
+        h1.titolo= title
+        div.form-contatti
+            h3 Form registration
+            p Please fill the form with your data to register
+            form(action="/account/registration", method="post") 
+                div.riga
+                    label(for="username") Username 
+                    input(type="text", name="username")
+                div.riga
+                    label(for="email") Email 
+                    input(type="text", name="email")
+                div.riga 
+                    label(for="password") Password 
+                    input(type="text", name="password")
+                div.riga 
+                    label(for="confirmPassword") Confirm password 
+                    input(type="text", name="confirmPassword")
+                div.riga.send
+                    input(type="submit", value="LOG IN") 
+        a(href="/", class="lnkBack") Back to home page

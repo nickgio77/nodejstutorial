@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  div.inner
+    h1.titolo Elenco utenti
+    br
+    .row  
+      each user in users 
+        .user 
+          a(href=`account/user/${user.email}`)#{user.username}
+    br  
+    a(href=`${link}`, class="link") Back to home page
+
